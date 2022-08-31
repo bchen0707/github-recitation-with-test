@@ -8,8 +8,12 @@ Negative numbers should return None
 def fibonacci(position):
   if(position == 1 or position == 2):
     return 1
-  return fibonacci(position - 1) + fibonacci(position - 2)
+  elif position > 0:
+    return fibonacci(position - 1) + fibonacci(position - 2)
+  else
+    return ((-1)**(position+1)) + fibonacci(position)
 
+  
 
 
 
